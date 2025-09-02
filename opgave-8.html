@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="paragraph">Tryk på en museknap...</div>
+
+    <script>
+      const paragraph = document.getElementById("paragraph");
+
+      document.addEventListener("mousedown", function (event) {
+        if (event.button === 0) {
+          paragraph.textContent = "knap a";
+        } else if (event.button === 2) {
+          paragraph.textContent = "knap B";
+        }
+      });
+    </script>
+  </body>
+</html>

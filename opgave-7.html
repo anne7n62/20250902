@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button id="knapA">Tryk her</button>
+      <button id="knapB">Tryk her</button>
+    </div>
+
+    <p id="paragraph">Klik på en knap</p>
+
+    <script>
+      //ANONYME EVENTLISTENER / Funktioner
+
+      function klik() {
+        const p = document.createElement("p");
+        p.textContent = "Du har klikket";
+        document.body.appendChild(p);
+      }
+
+      const knapA = document.getElementById("knapA");
+      const knapB = document.getElementById("knapB");
+      const paragraph = document.getElementById("paragraph");
+
+      knapA.addEventListener("click", () => {
+        paragraph.textContent = "A er blevet klikket";
+      });
+
+      knapB.addEventListener("click", () => {
+        paragraph.textContent = "B er blevet klikket";
+      });
+    </script>
+  </body>
+</html>
