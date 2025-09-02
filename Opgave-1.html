@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 1</h1>
+    <p>
+      Tag imod et tal fra brugeren. Antag at tallet er størrelsen på et område i
+      hektar. Lav en funktion der konverterer det til acres. Skriv dernæst den
+      inverse funktion.
+    </p>
+
+    <script>
+      console.log("script");
+      let hektar = Number(prompt("skriv et tal"));
+
+      document.addEventListener("DOMContentLoaded", convertHektar);
+
+      function convertHektar() {
+        let resultat = hektar / 0.40468564224;
+        console.log("resultat", resultat);
+      }
+    </script>
+  </body>
+</html>

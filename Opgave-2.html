@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 2</h1>
+    <p>
+      Math.random() returnerer en semitilfældig brøkværdi mellem 0 og 1 (1 ikke
+      inklusiv). • Skriv en funktion der kan slå plat eller krone med lig stor
+      sandsynlighed. Funktionen skal returnere værdien "plat" eller "krone".
+      Brug gerne ternary ?
+    </p>
+
+    <button id="start">Slå plat eller krone</button>
+
+    <script>
+      let clickButton = document.querySelector("#start");
+      let resultat = 0;
+
+      clickButton.addEventListener("click", spilStart);
+
+      function spilStart() {
+        resultat = Math.random();
+        console.log(resultat);
+
+        let udfald = resultat > 0.5 ? "plat" : "krone";
+        console.log(udfald);
+      }
+    </script>
+  </body>
+</html>
