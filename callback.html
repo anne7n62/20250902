@@ -6,15 +6,13 @@
     <title>Document</title>
   </head>
   <body>
- 
     <div>
-    <button id="knapA">Tryk her</button>
-    <button id="knapB">Tryk her</button>
-    <button id="knapC">Anonym event listener</button>
+      <button id="knapA">Tryk her</button>
+      <button id="knapB">Tryk her</button>
+      <button id="knapC">Anonym event listener</button>
+    </div>
 
-      </div>
-
-      <!-- <script>
+    <!-- <script>
 
          function klik() {
           const p = document.createElement("p");
@@ -27,8 +25,7 @@
       
       </script> -->
 
-
-   <!-- <script>
+    <!-- <script>
     //ANONYME EVENTLISTENER / Funktioner
 
          function klik() {
@@ -47,9 +44,24 @@
          });
       
       </script> -->
-    
-      
- 
-    </p>
+
+    <script>
+      //Arrow function
+
+      function klik() {
+        const p = document.createElement("p");
+        p.textContent = "Du har klikket";
+        document.body.appendChild(p);
+      }
+      //højere rangs function, fordi den tager imod funktion som argument
+      const knapA = document.getElementById("knapA");
+      const knapB = document.getElementById("knapB");
+      const knapC = document.getElementById("knapC");
+      knapA.addEventListener("click", klik);
+      knapB.addEventListener("click", klik);
+      knapC.addEventListener("click", () => {
+        knapC.textContent = "Jeg er blevet klikket";
+      });
+    </script>
   </body>
 </html>
