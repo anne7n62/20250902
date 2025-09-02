@@ -7,21 +7,18 @@
   </head>
   <body>
  
-    <div>
-    <h1 id="navneinput">Hej du</h1>
-      </div>
-
       <script>
 
-         let navn = prompt("Skriv dit navn");
-         let overskrift = document.getElementById("navneinput");
+          let navn = prompt("Skriv dit navn");
 
-         const nyOverskrift = document.createElement("h1");
-         overskrift.textContent="hej" + " " + ${navn};
+          // Lav en ny <h1>
+          const nyOverskrift = document.createElement("h1");
+          nyOverskrift.textContent = `Hej ${navn}!`;
 
+          // Tilføj den til siden
+          document.body.appendChild(nyOverskrift);
 
-
-      
+            
       </script>
 
       <!-- <script>
