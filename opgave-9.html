@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent" style="padding: 30px; background: lightblue">
+      Parent
+      <div id="child" style="padding: 30px; background: lightgreen">Child</div>
+    </div>
+
+    <script>
+      const parent = document.getElementById("parent");
+      const child = document.getElementById("child");
+
+      // Lytter på parent (bubbling - standard)
+      parent.addEventListener("click", function () {
+        console.log("Parent clicked (bubbling)");
+      });
+
+      // Lytter på child (bubbling - standard)
+      child.addEventListener("click", function () {
+        console.log("Child clicked (bubbling)");
+      });
+
+      // Eksempel med capturing på parent
+      parent.addEventListener(
+        "click",
+        function () {
+          console.log("Parent clicked (capturing)");
+        },
+        true // <--- aktiver capturing
+      );
+    </script>
+  </body>
+</html>
