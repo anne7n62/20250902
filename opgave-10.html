@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fibonacciRekursiv(n) {
+        return n <= 2 ? 1 : fibonacciRekursiv(n - 1) + fibonacciRekursiv(n - 2);
+      }
+
+      function fibonacciIterativ(n) {
+        let førForrigeTal,
+          forrigeTal = 0,
+          aktueltTal = 1;
+        for (let i = 1; i < n; i++) {
+          førForrigeTal = forrigeTal;
+          forrigeTal = aktueltTal;
+          aktueltTal = førForrigeTal + forrigeTal;
+        }
+        return aktueltTal;
+      }
+
+      // Vælg et tal at teste med
+      const n = 40;
+
+      // Mål rekursiv
+      console.time("Rekursiv Fibonacci");
+      console.log("Rekursiv:", fibonacciRekursiv(n));
+      console.timeEnd("Rekursiv Fibonacci");
+
+      // Mål iterativ
+      console.time("Iterativ Fibonacci");
+      console.log("Iterativ:", fibonacciIterativ(n));
+      console.timeEnd("Iterativ Fibonacci");
+    </script>
+  </body>
+</html>
