@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button id="knap">Tryk her</button>
+    </div>
+
+    <script>
+      let antalKlik = 0;
+
+      function klik() {
+        antalKlik++;
+        knap.textContent = `${antalKlik}`;
+      }
+
+      const knap = document.getElementById("knap");
+      knap.addEventListener("click", klik);
+    </script>
+
+    <!-- <script>
+  let antalKlik = 0;
+  const knap = document.getElementById("knap");
+
+  knap.addEventListener("click", function () {
+    antalKlik++;
+
+    let tekst = "";
+    for (let i = 0; i < 1; i++) {
+      tekst = `${antalKlik} `;
+    }
+    knap.textContent = tekst;
+  });
+</script> -->
+  </body>
+</html>

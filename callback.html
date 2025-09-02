@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+ 
+    <div>
+    <h1 id="navneinput">Hej du</h1>
+    <button id="knap">Tryk her</button>
+
+      </div>
+
+      <script>
+
+         function klik() {
+          const p = document.createElement("p");
+          p.textContent = "Du har klikket";
+          document.body.appendChild(p);
+         }
+         //højere rangs function, fordi den tager imod funktion som argument
+         const knap = document.getElementById("knap");
+         knap.addEventListener("click", klik); //tager to argumenter. 1) hvad skal reagere på 2)hvad skal der ske
+      
+      </script>
+
+    
+ 
+    </p>
+  </body>
+</html>
