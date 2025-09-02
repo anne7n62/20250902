@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 3</h1>
+    <p>
+      Skriv en funktion der kan simulere slag med en terning. Terningen skal
+      kunne have et vilkårligt antal sider (n), men default er 6. Funktionen
+      skal returnere et heltal mellem 1 og n, begge inklusive.
+    </p>
+
+    <button id="start">Slå plat eller krone</button>
+
+    <script>
+      function slaaTerning(side = 6) {
+        return Math.floor(Math.random() * side) + 1; //læg et til, så det går fra 1 til seks..
+      }
+
+      for(let i = 1; i <= 10; ++1) console.log(terning());
+      //for(let i = 1; i <= 10; ++1) console.log(terning(21)); //hvis man sætter 21 ind får vi en terning med 21 sider - den overskriver den default side antal
+    </script>
+  </body>
+</html>

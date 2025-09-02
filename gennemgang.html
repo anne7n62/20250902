@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 3</h1>
+    <p>
+      <script>
+        function sætning(...ord) {
+          for (var i = 0, sum = ""; i < ord.length; ++i) sum += ord[i] + " "; //lægger strengstykker sammen vha + operatoren // sum er en tom streng til at starte med
+          console.log(ord.length, "ord"); //læg også mellemrum mellem ordene
+          return sum.trim();
+        }
+
+        console.log(sætning("hej", "med", "jer"));
+      </script>
+    </p>
+  </body>
+</html>

@@ -16,7 +16,7 @@
 
     <button id="start">Slå plat eller krone</button>
 
-    <script>
+    <!-- <script>
       let clickButton = document.querySelector("#start");
       let resultat = 0;
 
@@ -29,6 +29,20 @@
         let udfald = resultat > 0.5 ? "plat" : "krone";
         console.log(udfald);
       }
+    </script> -->
+
+    <script>
+      function spilStart() {
+        return Math.random() < 0.5 ? "plat" : "krone";
+      }
+
+      console.log(spilStart());
+
+      // function mønt() {
+      //   return Math.random() < 0.5 ? "plat" : "krone";
+      // }
+
+      // for(let i=1; i <= 10; ++1)console.log(mønt()); //løkken er optional - hvis man vil kaste 10 gange
     </script>
   </body>
 </html>
