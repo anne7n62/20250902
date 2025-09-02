@@ -6,17 +6,21 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="paragraph">Tryk på en museknap...</div>
+    <button id="knapA">Knap A</button>
+    <button id="knapB">Knap B</button>
 
     <script>
-      const paragraph = document.getElementById("paragraph");
+      const knapA = document.getElementById("knapA");
+      const knapB = document.getElementById("knapB");
 
-      document.addEventListener("mousedown", function (event) {
-        if (event.button === 0) {
-          paragraph.textContent = "knap a";
-        } else if (event.button === 2) {
-          paragraph.textContent = "knap B";
-        }
+      knapA.addEventListener("click", () => {
+        knapA.style.backgroundColor = "black";
+        knapA.style.color = "white";
+      });
+
+      knapB.addEventListener("click", () => {
+        knapB.style.backgroundColor = "white";
+        knapB.style.color = "black";
       });
     </script>
   </body>
